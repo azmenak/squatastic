@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     incrementSquat: function(event) {
       this.firebaseRefs['squats'].transaction(function(currentObj) {
-        console.log(currentObj.timestamp, (new Date()).valueOf());
         if (currentObj.timestamp < ((new Date()).valueOf() + (10*1000))) {
           currentCount = currentObj.count;
           return {
@@ -34,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     decrementSquat: function(event) {
       this.firebaseRefs['squats'].transaction(function(currentObj) {
         currentCount = currentObj.count;
-        return {count: currentCount - 1};
+        return {
+          count: currentCount - 1,
+          timestamp: (new Date()).valueOf()
+        };
       });
     },
 
