@@ -1,0 +1,29 @@
+{
+  "name": "squat-count",
+  "version": "0.1.0",
+  "authors": [
+    "Adam Zmenak <adam@dinteractive.ca>"
+  ],
+  "description": "Once you see it...",
+  "main": "main.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "#winning"
+  ],
+  "license": "MIT",
+  "homepage": "https://sq-count.firebaseapp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ReactFire": "~0.1.5",
+    "firebase": "~1.0.15",
+    "react": "~0.10.0"
+  }
+}

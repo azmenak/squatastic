@@ -1,0 +1,9 @@
+{
+  "firebase": "sq-count",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    ".*",
+    "**/node_modules/**"
+  ]
+}
