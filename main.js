@@ -46,17 +46,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         id: 'root'
       }, 
         div({
-          className: 'squats'
+          className: 'squats well'
         },
-          R.h2(null, 'Squats'),
-          R.span({className: 'realtime-sqaut-count'}, this.state.squats.count),
+          R.h2(null, 'Squats',
+            R.span({className: 'realtime-sqaut-count label label-default'}, this.state.squats.count)
+          ),
           R.button({
-            className: 'super-button',
+            className: 'super-button btn btn-default',
             ref: 'incrementer',
             onClick: this.incrementSquat
           }, '+1 Squat'),
           R.button({
-            className: 'mega-button',
+            className: 'mega-button btn btn-default',
             ref: 'decrementter',
             onClick: this.decrementSquat
           }, '-1 Squat')
