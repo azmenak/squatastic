@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     getInitialState: function() {
       return {
         squats: {
-          count: 'Loading squats data...',
+          count: 0,
           timestamp: null
         }
       };
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     incrementSquat: function(event) {
       this.firebaseRefs['squats'].transaction(function(currentObj) {
-        if (currentObj.timestamp < ((new Date()).valueOf() + (10*1000))) {
+        if (((new Date()).valueOf() - currentObj.timestamp) > 10000) {
           currentCount = currentObj.count;
           return {
             count: currentCount + 1,
