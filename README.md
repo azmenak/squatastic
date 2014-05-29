@@ -1,6 +1,14 @@
 Squatastic
 ==========
-Once you see it... (:\))[https://sq-count.firebaseapp.com]
+Once you see it... https://sq-count.firebaseapp.com
+
+Roadmap
+-------
+[] Social Sharing
+[] Better transactions
+[] Data logging
+[] Activity Grpahs
+[] Betting and prediction :)
 
 Its a totally static "app", don't need any server to run, just open `index.html`
 
